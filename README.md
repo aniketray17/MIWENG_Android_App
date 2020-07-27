@@ -1,6 +1,9 @@
 # MIWENG_Android_App
+
 //MIWENG = MIWOK + ENGLISH Android App  ;)
+
 /**
+
 *This android app is having 4 activities of Numbers, Family, Colors, Phrases.
 
 *Each activity is having list of words or phrases in two different languages i.e English & Miwok.
