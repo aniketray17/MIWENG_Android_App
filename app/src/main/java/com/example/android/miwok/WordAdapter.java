@@ -2,6 +2,7 @@ package com.example.android.miwok;
 
 import android.app.Activity;
 import android.content.Context;
+import android.media.Image;
 import android.provider.UserDictionary;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -60,6 +61,17 @@ public class WordAdapter extends ArrayAdapter<Word> {
         // Get the version number from the current AndroidFlavor object and
         // set this text on the number TextView
         miwokTextView.setText(currentWord.getMiwokTranslation());
+
+        ImageView iconView = (ImageView) listItemView.findViewById(R.id.image);
+        if(currentWord.hasImage())
+        {
+            iconView.setImageResource(currentWord.getImageResourceId());
+        }
+        else
+        {
+            iconView.setVisibility(View.GONE);
+        }
+
 
         // Find the ImageView in the list_item.xml layout with the ID list_item_icon
 
