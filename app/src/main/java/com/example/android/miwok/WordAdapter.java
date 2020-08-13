@@ -6,6 +6,7 @@ import android.media.Image;
 import android.provider.UserDictionary;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,8 +18,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WordAdapter extends ArrayAdapter<Word> {
-    public WordAdapter(Context context, List<Word> pWords) {
+    private int mColorResourceId;
+    public WordAdapter(Context context, List<Word> pWords,int colorResourceId) {
         super(context, 0, pWords);
+        mColorResourceId = colorResourceId;
     }
 
     public WordAdapter(Activity context, ArrayList<Word> androidFlavors) {
@@ -61,7 +64,6 @@ public class WordAdapter extends ArrayAdapter<Word> {
         // Get the version number from the current AndroidFlavor object and
         // set this text on the number TextView
         miwokTextView.setText(currentWord.getMiwokTranslation());
-
         ImageView iconView = (ImageView) listItemView.findViewById(R.id.image);
         if(currentWord.hasImage())
         {
@@ -72,6 +74,9 @@ public class WordAdapter extends ArrayAdapter<Word> {
             iconView.setVisibility(View.GONE);
         }
 
+        View textContainer = listItemView.findViewById(R.id.text_container);
+        int color = ContextCompat.getColor(getContext(),mColorResourceId);
+        textContainer.setBackgroundColor(color);
 
         // Find the ImageView in the list_item.xml layout with the ID list_item_icon
 
