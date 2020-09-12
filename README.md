@@ -7,6 +7,6 @@ This android app is having the messages in all the activities in two languages i
 Number Activity is having Numbers from 1 to 10 in it's english and miwok translation and also having the images showing the corresponding count.
 Color Activity is having the list of colors with it's respective image.
 Family Activity is having the the translation of all the family relation with an image deonting the person according to it's name.
-Phrases Activity is haing the common phrases that used in daily lives.
+Phrases Activity is having the common phrases that used in daily lives.
 
 Learned a lot while doing this Project !! :)
